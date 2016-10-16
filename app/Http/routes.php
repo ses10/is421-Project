@@ -19,4 +19,5 @@ Route::group(['middleware' => ['web']], function(){
 	Route::get('/login', ['as' => 'login', 'uses' => 'AuthController@login']);
 	Route::post('/handleLogin', ['as' => 'handleLogin', 'uses' => 'AuthController@handleLogin']);
 	Route::get('/home', ['middleware' => 'auth', 'as' => 'home', 'uses' => 'UsersController@home']);
+	Route::get('/logout', ['as' => 'logout', 'uses' => 'AuthController@logout']);
 });
