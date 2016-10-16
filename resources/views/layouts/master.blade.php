@@ -17,6 +17,9 @@
             {{ link_to_route('login', 'Login') }}
           </li>        
         @endif 
+        <li>
+            {{ link_to_route('users.create', 'New User') }}
+        </li>  
       </ul>
 
       @yield('content')
