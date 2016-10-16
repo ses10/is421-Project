@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\User;
 
 class UsersController extends Controller
 {
@@ -36,7 +37,17 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->only('name', 'email', 'password');
+        $data['password'] = bcrypt($data['password']);
+
+        $user = User::create($data);
+
+        if($user)
+        {
+            \Auth::login($user);
+            return redirect()->route('home');
+        }
+        return back()->withInput();
     }
 
     /**
