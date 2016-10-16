@@ -25,6 +25,6 @@ class AuthController extends Controller
     	}
 
     	//return to form if login unsucessful
-    	return back()->withInput('login failed');
+    	return back()->withInput();
     }
 }
