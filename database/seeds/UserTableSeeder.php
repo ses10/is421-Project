@@ -16,7 +16,7 @@ class UserTableSeeder extends Seeder
         User::create([
         	'name' => 'dennis',
         	'email' => 'ds646@njit.edu',
-        	'password' => bcrypt('qwerty');
+        	'password' => bcrypt('qwerty')
         	]);
     }
 }
