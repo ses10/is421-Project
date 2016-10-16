@@ -14,7 +14,7 @@ class AuthController extends Controller
     	return view('auth.login'); 
     }
 
-    public function handleLogin(Request $requestk)
+    public function handleLogin(Request $request)
     {
     	$data = $request->only('email', 'password');
 
