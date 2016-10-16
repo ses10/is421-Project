@@ -40,6 +40,10 @@
             <div class="content">
                 <div class="title">Laravel 5 - Dennis</div>
             </div>
+            if(DB::connection()->getDatabaseName())
+   {
+     echo "connected successfully to database ".DB::connection()->getDatabaseName();
+   }
         </div>
     </body>
 </html>
