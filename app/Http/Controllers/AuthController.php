@@ -20,7 +20,6 @@ class AuthController extends Controller
 
     	//attempt login
     	if(\Auth::attempt($data)){
-    		return 'logged in';
     		return redirect()->intended(home);
     	}
 
