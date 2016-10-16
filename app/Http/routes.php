@@ -1,4 +1,4 @@
-k<?php
+<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +17,6 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['web']], function(){
 	Route::get('/login', ['as' => 'login', 'uses' => 'AuthController@login']);
-	Route::get('/handleLogin', ['as' => 'handleLogin', 'uses' => 'AuthController@handleLogin']);
+	Route::get('/handleLogin', ['as' => 'handleLogin', 'uses' => 'AuthController@handleLkogin']);
 
 });
