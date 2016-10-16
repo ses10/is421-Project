@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class AuthContoller extends Controller
+class AuthController extends Controller
 {
 	//just return login view
     public function login()
