@@ -20,7 +20,7 @@ class AuthController extends Controller
 
     	//attempt login
     	if(\Auth::attempt($data)){
-    		return redirect()->intended(home);
+    		return redirect()->intended('home');
     	}
 
     	//return to form if login unsucessful
