@@ -37,6 +37,8 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, User::$create_validation_rules);
+
         $data = $request->only('name', 'email', 'password');
         $data['password'] = bcrypt($data['password']);
 

@@ -28,4 +28,10 @@ class User extends Authenticatable
         'email' => 'required|email|exists:users',
         'password' => 'required'
     ];
+
+    public static $create_validation_rules = [
+        'name' => 'required|unique:users',
+        'email' => 'required|email|unique:users',
+        'password' => 'required'
+    ];    
 }
