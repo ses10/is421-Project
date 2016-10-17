@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\User;
 
 class AuthController extends Controller
 {
@@ -16,6 +17,8 @@ class AuthController extends Controller
 
     public function handleLogin(Request $request)
     {
+        $this->validate($request, User::$login_validation_rules);
+
     	$data = $request->only('email', 'password');
 
     	//attempt login
