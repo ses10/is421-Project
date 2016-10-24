@@ -28,7 +28,7 @@ class User extends Authenticatable
     ];
 
     public static $login_validation_rules = [
-        'username' => 'required|username|exists:users',
+        'username' => 'required|exists:users',
         'password' => 'required'
     ];
 
