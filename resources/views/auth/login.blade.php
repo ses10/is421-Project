@@ -15,8 +15,8 @@
 
   {!! Form::open(array('route' => 'handleLogin')) !!}
     <div class="form-group">
-        {!! Form::label('email') !!}
-        {!! Form::text('email', null, array('class' => 'form-control')) !!}
+        {!! Form::label('username') !!}
+        {!! Form::text('username', null, array('class' => 'form-control')) !!}
     </div>
     <div class="form-group">
       {!! Form::label('password') !!}
