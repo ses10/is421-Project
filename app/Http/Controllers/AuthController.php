@@ -19,7 +19,7 @@ class AuthController extends Controller
     {
         $this->validate($request, User::$login_validation_rules);
 
-    	$data = $request->only('email', 'password');
+    	$data = $request->only('username', 'password');
 
     	//attempt login
     	if(\Auth::attempt($data)){
