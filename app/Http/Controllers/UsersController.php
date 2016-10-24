@@ -42,18 +42,14 @@ class UsersController extends Controller
         $data = $request->only('username', 'firstName', 'lastName', 'password');
         $data['password'] = bcrypt($data['password']);
 
-        foreach ($data as $key => $value) {
-            echo $value;
-        }
+        $user = User::create($data);
 
-        //$user = User::create($data);
-/*
         if($user)
         {
             \Auth::login($user);
             return redirect()->route('home');
         }
-        return back()->withInput();*/
+        return back()->withInput();
     }
 
     /**
