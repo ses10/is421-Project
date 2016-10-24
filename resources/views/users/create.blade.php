@@ -13,12 +13,16 @@
   @endif  
   {!! Form::open(array('route' => 'users.store')) !!}
     <div class="form-group">
-        {!! Form::label('name', 'Username') !!}
-        {!! Form::text('name', null, array('class' => 'form-control')) !!}
+        {!! Form::label('username', 'Username') !!}
+        {!! Form::text('username', null, array('class' => 'form-control')) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('email') !!}
-        {!! Form::text('email', null, array('class' => 'form-control')) !!}
+        {!! Form::label('First Name') !!}
+        {!! Form::text('firstName', null, array('class' => 'form-control')) !!}
+    </div>
+    <div class="form-group">
+        {!! Form::label('Last Name') !!}
+        {!! Form::text('lastName', null, array('class' => 'form-control')) !!}
     </div>
     <div class="form-group">
       {!! Form::label('password') !!}
