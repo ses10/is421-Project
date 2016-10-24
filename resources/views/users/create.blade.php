@@ -14,7 +14,7 @@
   {!! Form::open(array('route' => 'users.store')) !!}
     <div class="form-group">
         {!! Form::label('username', 'Username') !!}
-        {!! Form::text('username', array('class' => 'form-control')) !!}
+        {!! Form::text('username', null, array('class' => 'form-control')) !!}
     </div>
     <div class="form-group">
         {!! Form::label('First Name') !!}
