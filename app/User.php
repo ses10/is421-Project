@@ -6,13 +6,16 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+
+    public $primaryKey = 'username';
+    public $incrementing = false;
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'password', 'firstName', 'lastName'
     ];
 
     /**
@@ -25,13 +28,12 @@ class User extends Authenticatable
     ];
 
     public static $login_validation_rules = [
-        'email' => 'required|email|exists:users',
+        'username' => 'required|username|exists:users',
         'password' => 'required'
     ];
 
     public static $create_validation_rules = [
-        'name' => 'required|unique:users',
-        'email' => 'required|email|unique:users',
+        'username' => 'required|unique:users',
         'password' => 'required'
     ];    
 }
