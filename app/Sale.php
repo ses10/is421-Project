@@ -15,4 +15,11 @@ class Sale extends Model
     {
     	return $this->belongsTo('App\Car', 'vin', 'vin');
     }
+
+    public static $create_validation_rules = [
+        'vin' => 'required|unique:cars',
+        'year' => 'required',
+        'make' => 'required',
+        'model' => 'required'
+    ];   
 }
