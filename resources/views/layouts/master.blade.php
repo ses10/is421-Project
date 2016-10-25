@@ -16,10 +16,10 @@
           <li>
             {{ link_to_route('login', 'Login') }}
           </li>        
-        @endif 
-        <li>
+          <li>
             {{ link_to_route('users.create', 'New User') }}
-        </li>  
+          </li>  
+        @endif 
       </ul>
 
       @yield('content')
