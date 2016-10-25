@@ -21,3 +21,4 @@ Route::get('/', function () {
 	Route::get('/home', ['middleware' => 'auth', 'as' => 'home', 'uses' => 'UsersController@home']);
 	Route::get('/logout', ['as' => 'logout', 'uses' => 'AuthController@logout']);
 	Route::resource('users', 'UsersController', ['only' => ['create', 'store']]);
+	Route::resource('sales', 'SalesController', ['only' => ['create', 'store']]);
