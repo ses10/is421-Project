@@ -36,4 +36,14 @@ class User extends Authenticatable
         'username' => 'required|unique:users',
         'password' => 'required'
     ];    
+
+    public function cars()
+    {
+        return $this->hasMany('App\Car', 'username', 'username');
+    }
+
+    public function sales()
+    {
+        return $this->hasMany('App\Sale', 'username', 'username');
+    }
 }

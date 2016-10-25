@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\User;
+use App\Car;
+use App\Sale;
 
 class UsersController extends Controller
 {
@@ -99,6 +101,8 @@ class UsersController extends Controller
 
     public function home()
     {
-        return view('users.home');
+        return view('users.home', ['firstName' => \Auth::user()->firstName, 
+                                   'lastName' => \Auth::user()->lastName,
+                                   'sales' => Sale::where('username', \Auth::user()->username)->get()]);
     }
 }
