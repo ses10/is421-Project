@@ -10,6 +10,9 @@
       <ul class="nav nav-pills">
         @if(\Auth::check())
           <li>
+            {{ link_to_route('home', 'Home') }}
+          </li>
+          <li>
             {{ link_to_route('logout', 'Logout') }}
           </li>
         @else
