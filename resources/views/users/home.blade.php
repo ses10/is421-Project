@@ -6,7 +6,7 @@
 	<br>
 
 	<h4>Sales</h4>
-	{{ link_to_route('home', 'New Sale') }}
+	{{ link_to_route('sales.create', 'New Sale') }}
 
 	<table class="table">
 		<thead>
