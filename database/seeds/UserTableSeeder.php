@@ -19,5 +19,11 @@ class UserTableSeeder extends Seeder
             'firstName' => 'Dennis',
             'lastName' => 'Sesma'
         	]);
+        User::create([
+            'username' => 'bob',
+            'password' => bcrypt('bob'),
+            'firstName' => 'Bob',
+            'lastName' => 'Bobbinson'
+            ]);
     }
 }
