@@ -7,7 +7,7 @@ class EntrustSetupTables extends Migration
     /**
      * Run the migrations.
      *
-     * @return  void
+     * @return  voi d
      */
     public function up()
     {
