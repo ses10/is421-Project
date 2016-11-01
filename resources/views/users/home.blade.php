@@ -3,6 +3,11 @@
 @section('content')
 	<h3>Homepage for user: {{ $firstName . " " . $lastName }}</h3>
 
+	@if(\Auth::user()->hasRole('admin'))
+		<br>
+		@include('admin.users')
+	@endif
+
 	<br>
 
 	<h4>Sales</h4>
