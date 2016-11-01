@@ -49,6 +49,10 @@ class SalesController extends Controller
 
         $data = $request->only('vin', 'year', 'make', 'model');
 
+        $data = array('username' => \Auth::user()->username) + $data;
+
+        //Car::create($data);
+
         return $data;
     }
 
